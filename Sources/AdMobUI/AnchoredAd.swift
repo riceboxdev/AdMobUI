@@ -30,6 +30,12 @@ public struct AnchoredAd: View {
         self.width = size.width
     }
     
+    public init(ad: Advertisement, height: CGFloat = 320, width: CGFloat = 320) {
+        self.ad = ad
+        self.height = height
+        self.width = width
+    }
+    
     public var body: some View {
         Group {
             if showingAds {

@@ -122,10 +122,10 @@ extension InlineAdViewController: GADBannerViewDelegate {
     public func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         if
             let responseInfo = bannerView.responseInfo,
-            let responseIdentifier = responseInfo.responseIdentifier,
-            let adNetworkClassName = responseInfo.adNetworkClassName
+            let responseIdentifier = responseInfo.responseIdentifier
         {
-            print("adViewDidReceiveAd from network: \(adNetworkClassName), response Id='\(responseIdentifier)'")
+            let adNetworkClassName = responseInfo.adNetworkInfoArray.map(\.adNetworkClassName).joined(separator: ", ")
+            print("adViewDidReceiveAd from network: \(adNetworkClassName). response Id='\(responseIdentifier)'")
         }
     }
     

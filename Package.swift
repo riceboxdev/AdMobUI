@@ -13,8 +13,8 @@ let package = Package(
     dependencies: [
         .package(
             name: "GoogleMobileAds",
-            url: "https://github.com/quanghits/GoogleMobileAds.git",
-            .upToNextMajor(from: "8.13.0")
+            url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+            .upToNextMajor(from: "11.5.0")
         ),
         .package(
             name: "KeyWindow",

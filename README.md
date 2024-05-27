@@ -56,8 +56,6 @@ struct ContentView: View {
 
 AdMobUI only support iOS since the `GoogleMobileAdsSDK` doesn't support any other operating system.
 
-AdMobUI also pulls `GoogleMobileAdsSDK` through an unofficial swift package in order to avoid using `cocoapods`. There are known issues when archiving your product. More info here: https://github.com/quanghits/GoogleMobileAds
-
 ### Discussion
 
 If you want to use Swift Package Manager, you can't use mediation groups that support third party SDKs with this library. If you need to incorporate ad partner SDKs, you must use the Cocoapods installation and follow Google's recommended installation via their official documentation.
@@ -75,9 +73,9 @@ let package = Package(
     name: "MySwiftPackage",
     packages: [
         .package(
-            name: "KeyWindow",
-            url: "https://github.com/briannadoubt/KeyWindow.git",
-            .upToNextMajor(from: "0.1.0")
+            name: "AdMobUI",
+            url: "https://github.com/briannadoubt/AdMobUI.git",
+            .upToNextMajor(from: "1.0.1")
         )
     ],
     targets: [
