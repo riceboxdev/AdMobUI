@@ -14,7 +14,7 @@ let package = Package(
         .package(
             name: "GoogleMobileAds",
             url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-            .upToNextMajor(from: "11.5.0")
+            .upToNextMajor(from: "12.0.0")
         ),
         .package(
             name: "KeyWindow",
